@@ -29,7 +29,7 @@ or
 make bonus
 ```
  
-## Example
+## Examples
 
 Without bonus (infile and truncate):  
 ![Pipex exemple](https://i.ibb.co/chfzsdD4/image.png)  
