@@ -42,12 +42,12 @@ You can use two or more commands in a row.
 ## Examples
 
 Without bonus (infile and truncate):  
-![Pipex exemple](https://i.ibb.co/chfzsdD4/image.png)  
+![Pipex example](https://i.ibb.co/chfzsdD4/image.png)  
 Zsh:  
 ![Pipex compare](https://i.ibb.co/4nGbxBDL/image.png)  
 
 With bonus (heredoc and append):  
-![Pipex bonus exemple](https://i.ibb.co/TD5Y3krT/image.png)  
+![Pipex bonus example](https://i.ibb.co/TD5Y3krT/image.png)  
 Zsh:  
 ![Pipex bonus compare](https://i.ibb.co/q30DpC72/image.png)  
 
