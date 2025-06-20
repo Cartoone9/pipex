@@ -25,14 +25,14 @@ make bonus
 
 ## Exemple
 
-Without bonus (infile and truncate):
+Without bonus (infile and truncate):  
 ![Pipex exemple](https://i.ibb.co/chfzsdD4/image.png)
-Zsh:
+Zsh:  
 ![Pipex compare](https://i.ibb.co/4nGbxBDL/image.png)
 
-With bonus (heredoc and append):
+With bonus (heredoc and append):  
 ![Pipex bonus exemple](https://i.ibb.co/TD5Y3krT/image.png)
-Zsh:
+Zsh:  
 ![Pipex bonus compare](https://i.ibb.co/q30DpC72/image.png)
 
 ## Note on Project State
