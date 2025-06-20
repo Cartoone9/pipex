@@ -4,11 +4,17 @@
 
 # pipex
 
-This is my Pipex project, where the goal was to build a C program that simulates shell piping ('|') and redirections ('<' with '>', and '<<' with '>>' as a bonus). It was a deep dive into UNIX system calls for process management, including fork, pipe, dup2, and execve, providing critical insights into how the shell executes commands. 
+This is my Pipex project, where the goal was to build a C program that simulates shell piping ('|') and redirections ('<' with '>', and as a bonus '<<' with '>>'). It was a deep dive into UNIX system calls for process management, including fork, pipe, dup2, and execve, providing critical insights into how the shell executes commands. 
 
 ## Important functions
 
+- fork: creates a new child process, useful to execute multiple processes at the same time, in parallel.
 
+- pipe: creates a pipe for interprocess communication, in this project it allows one child process to communicate with the next.
+
+- dup2: redirects file descriptors, useful to change stdin and stdout for redirections.
+
+- execve: executes a new command with arguments inside a sub-shell.
 
 ## Usage
 
@@ -23,7 +29,7 @@ or
 make bonus
 ```
 
-## Exemple
+## Example
 
 Without bonus (infile and truncate):  
 ![Pipex exemple](https://i.ibb.co/chfzsdD4/image.png)  
@@ -47,7 +53,7 @@ The program currently accepts a command like:
 ./pipex here_doc "cmd1" "cmd2" outfile
 ```
 
-It shouldn't work because the command is missing the 'EOF'.
+It shouldn't work because the command is missing the 'EOF'.  
 You could easily fix this by modifying the function ft_file_parsing like this:
 
 ```C
@@ -63,7 +69,7 @@ int	*ft_file_parsing(int ac, char **av, int *cmd_n, int *output_error)
         // EDIT BEGIN
 		if (ac < 6)
 		{
-			write (2, "pipex: missing args\n", 20);
+			write(2, "pipex: missing args\n", 20);
 			return (NULL);
 		}
         // EDIT END
