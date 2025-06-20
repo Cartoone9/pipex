@@ -19,6 +19,10 @@ or
 make bonus
 ```
 
+## Exemple
+
+![Pipex exemple](https://i.ibb.co/bMPwvT5G/image.png)
+
 ## Note on Project State
 
 All projects from my 42 cursus are preserved in their state immediately following their final evaluation. While they may contain mistakes or stylistic errors, I've chosen not to alter them. This approach provides a clear and authentic timeline of my progress and learning journey as a programmer.
