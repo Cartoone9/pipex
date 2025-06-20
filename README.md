@@ -4,7 +4,7 @@
 
 # pipex
 
-This is my Pipex project, where the goal was to build a C program that simulates shell piping ('|') and redirections ('<', '>' and '>>' as a bonus). It was a deep dive into UNIX system calls for process management, including fork, pipe, dup2, and execve, providing critical insights into how the shell executes commands. 
+This is my Pipex project, where the goal was to build a C program that simulates shell piping ('|') and redirections ('<' with '>', and '<<' with '>>' as a bonus). It was a deep dive into UNIX system calls for process management, including fork, pipe, dup2, and execve, providing critical insights into how the shell executes commands. 
 
 ## Usage
 
