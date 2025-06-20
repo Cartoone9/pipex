@@ -23,11 +23,25 @@ To compile the program, navigate to the project root and run:
 make
 ```
 
-or
+Or:
 
 ```Bash
 make bonus
 ```
+
+Then you can use the program like this:
+
+```Bash
+./pipex infile "cmd1" "cmd2" outfile
+```
+
+Or like this:
+
+```Bash
+./pipex here_doc eof "cmd1" "cmd2" outfile
+```
+
+You can use two or more commands in a row.
  
 ## Examples
 
