@@ -31,7 +31,7 @@ Then you can use the program like this:
 ./pipex infile "cmd1" "cmd2" outfile
 ```
 
-Or like this:
+Or like this for the heredoc bonus:
 
 ```Bash
 ./pipex here_doc eof "cmd1" "cmd2" outfile
