@@ -21,11 +21,7 @@ This is my Pipex project, where the goal was to build a C program that simulates
 To compile the program, navigate to the project root and run:
 ```Bash
 make
-```
-
-Or:
-
-```Bash
+# or
 make bonus
 ```
 
