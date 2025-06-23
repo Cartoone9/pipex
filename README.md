@@ -76,13 +76,13 @@ int	*ft_file_parsing(int ac, char **av, int *cmd_n, int *output_error)
 	buffer = NULL;
 	if (ft_strncmp(av[1], "here_doc", 8) == 0)
 	{
-        // EDIT BEGIN
+        	// EDIT BEGIN
 		if (ac < 6)
 		{
 			write(2, "pipex: missing args\n", 20);
 			return (NULL);
 		}
-        // EDIT END
+        	// EDIT END
 
 		if (ft_init_buffer(&buffer) == -1)
 			return (NULL);
