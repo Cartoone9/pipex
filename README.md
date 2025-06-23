@@ -4,22 +4,22 @@
 
 # pipex
   
-This is my Pipex project, where the goal was to build a C program that simulates shell piping ('|') and redirections ('<' with '>', and as a bonus '<<' with '>>'). It was a deep dive into UNIX system calls for process management, including fork, pipe, dup2, and execve, providing critical insights into how the shell executes commands. 
+This is my Pipex project, where the goal was to build a C program that simulates shell piping (`|`) and redirections (`<` with `>`, and as a bonus `<<` with `>>`). It was a deep dive into UNIX system calls for process management, including `fork()`, `pipe()`, `dup2()`, and `execve()`, providing critical insights into how the shell executes commands. 
 
 ## Important functions
 
-- fork: creates a new child process, useful to execute multiple processes at the same time, in parallel.
+- `fork()`: creates a new child process, useful to execute multiple processes at the same time, in parallel.
 
-- pipe: creates a pipe for interprocess communication, in this project it allows one child process to communicate with the next.
+- `pipe()`: creates a pipe for interprocess communication, in this project it allows one child process to communicate with the next.
 
-- dup2: redirects file descriptors, useful to change stdin and stdout for redirections.
+- `dup2()`: redirects file descriptors, useful to change stdin and stdout for redirections.
 
-- execve: executes a new command with arguments inside a sub-shell.
+- `execve()`: executes a new command with arguments inside a sub-shell.
 
 ## Usage
 
 To compile the program, navigate to the project root and run:
-```Bash
+```bash
 make
 # or
 make bonus
@@ -27,13 +27,13 @@ make bonus
 
 Then you can use the program like this:
 
-```Bash
+```bash
 ./pipex infile "cmd1" "cmd2" outfile
 ```
 
 Or like this for the heredoc bonus:
 
-```Bash
+```bash
 ./pipex here_doc eof "cmd1" "cmd2" outfile
 ```
 
@@ -55,16 +55,16 @@ Zsh:
 
 All projects from my 42 cursus are preserved in their state immediately following their final evaluation. While they may contain mistakes or stylistic errors, I've chosen not to alter them. This approach provides a clear and authentic timeline of my progress and learning journey as a programmer.
 
-## Notable errors
+## Known Issues & Fix Suggestions
 
 The program currently accepts a command like:
 
-```Bash
+```bash
 ./pipex here_doc "cmd1" "cmd2" outfile
 ```
 
-It shouldn't work because the command is missing the 'EOF'.  
-You could easily fix this by modifying the function ft_file_parsing like this:
+It shouldn't work because the command is missing the `EOF`.  
+You could easily fix this by modifying the function `ft_file_parsing()` like this:
 
 ```C
 int	*ft_file_parsing(int ac, char **av, int *cmd_n, int *output_error)
@@ -94,7 +94,7 @@ int	*ft_file_parsing(int ac, char **av, int *cmd_n, int *output_error)
 ...
 ```
 
-There's also an unprotected malloc in the ft_empty_args function, and in my get_next_line function ft_fill_stash.
+`ft_fill_stash()` in my get_next_line implementation contains an unprotected `malloc()` that could cause issues in edge cases.
 
 ## License
 
