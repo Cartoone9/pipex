@@ -6,6 +6,16 @@
   
 This is my Pipex project, where the goal was to build a C program that simulates shell piping (`|`) and redirections (`<` with `>`, and as a bonus `<<` with `>>`). It was a deep dive into UNIX system calls for process management, including `fork()`, `pipe()`, `dup2()`, and `execve()`, providing critical insights into how the shell executes commands. 
 
+## Table of Contents
+
+- [About](#pipex)
+- [Important functions](#important-functions)
+- [Usage](#usage)
+- [Examples](#examples)
+- [Note on Project State](#note-on-project-state)
+- [Known Issues & Fix Suggestions](#known-issues--fix-suggestions)
+- [License](#license)
+
 ## Important functions
 
 - `fork()`: creates a new child process, useful to execute multiple processes at the same time, in parallel.
